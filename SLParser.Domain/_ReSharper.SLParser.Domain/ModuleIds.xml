@@ -1,4 +1,0 @@
-<Modules>
-  <Module PersistentId="70CCA707-51EC-4637-A30C-247AAD200D4A" ModuleId="SLParser.Domain" />
-  <Module PersistentId="B84B8CED-F078-41C0-86E1-182B872B8577" ModuleId="SL.WebParser" />
-</Modules>
