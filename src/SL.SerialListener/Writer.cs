@@ -17,7 +17,7 @@ namespace SL.SerialListener
 		public void WriteToPort(string msg)
 		{
 			if(!_arduinoPort.IsOpen) throw new Exception("Port is not open!");
-			_arduinoPort.Write("lisa hihiXtestarXmer");
+			_arduinoPort.Write(msg);
 
 		}
 

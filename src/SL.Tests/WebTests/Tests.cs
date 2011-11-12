@@ -105,9 +105,9 @@ namespace SL.Tests.WebTests
 
             var busList = WebParser.ConvertHtmlNodeToBuses(nodeList);
 
-            Assert.AreEqual(1,busList.Count);
+            Assert.AreEqual(1,busList.Buses.Count);
 
-            var bus = busList[0];
+            var bus = busList.Buses[0];
 
             Assert.AreEqual("A",bus.LineNumber);
             Assert.AreEqual("B",bus.Destination);

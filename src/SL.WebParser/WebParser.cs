@@ -21,7 +21,7 @@ namespace SL.Web
             _searchPath = path;
         }
 
-        public void GetWebPage()
+        public RealtimeInfo GetWebPage()
         {
             var htmlDocument = new HtmlDocument();
             try
@@ -36,22 +36,23 @@ namespace SL.Web
                 Console.WriteLine(e.Message);
             }
 
-            ParseWebPage(htmlDocument.DocumentNode);
+            return ParseWebPage(htmlDocument.DocumentNode);
         }
 
-        public IList<Bus> ParseWebPage(HtmlNode document)
+        private RealtimeInfo ParseWebPage(HtmlNode document)
         {
             var buses = document.QuerySelectorAll(_searchPath);
 
             return ConvertHtmlNodeToBuses(buses);
         }
 
-        public static IList<Bus> ConvertHtmlNodeToBuses(IEnumerable<HtmlNode> buses)
+        public static RealtimeInfo ConvertHtmlNodeToBuses(IEnumerable<HtmlNode> buses)
         {
             if(buses==null) throw new ArgumentNullException("buses");
 
             var tempList = new List<HtmlNode>(buses);
             var myBuses = new List<Bus>();
+        	var info = new RealtimeInfo();
 
             for(int i=0;i<tempList.Count;i += 3)
             {
@@ -62,9 +63,9 @@ namespace SL.Web
                                         DepartTime = HtmlNodeToString(tempList[i + 2])
                                     };
 
-                myBuses.Add(tmpBus);
+            	info.Buses.Add(tmpBus);
             }
-            return myBuses;
+        	return info;
         }
 
         public static string HtmlNodeToString(HtmlNode node)

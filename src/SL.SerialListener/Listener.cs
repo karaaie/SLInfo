@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using SLParser.Domain;
 using Bus = MassTransit.Bus;
 using MassTransit;
@@ -28,9 +29,10 @@ namespace SL.SerialListener
 		
 		private void SendToArduino(RealtimeInfo info)
 		{
-			
+			string outputString = info.Buses.Aggregate("", (current, bus) => current + String.Format("{0}    {1}X", bus.LineNumber, bus.DepartTime));
+			_writer.WriteToPort(outputString);
+
+			Console.WriteLine("Writing this to COM4\n " + outputString);
 		}
-
-
 	}
 }

@@ -21,7 +21,7 @@ void loop() {
   }else{
     Reset();
     PrintToScreen();
-    delay(1000);
+    delay(5000);
   }
 }
 
@@ -32,14 +32,12 @@ void Reset(){
 
 void PrintToScreen(){
   lcd.clear();
-  lcd.setCursor(0,0);
-  lcd.print(infofields[0]);
-  lcd.setCursor(0,0);  
-  lcd.print(infofields[1]);
-  lcd.setCursor(0,2);
-  lcd.print(infofields[2]);
-  lcd.setCursor(0,3);
-  lcd.print(infofields[3]);
+  int i=0;
+  
+  for(i=0;i<4;i++){
+    lcd.setCursor(0,i);
+  lcd.print(infofields[i]);
+  }
 }
 
 void GetAvailableData(){
