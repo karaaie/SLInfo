@@ -29,10 +29,20 @@ namespace SL.SerialListener
 		
 		private void SendToArduino(RealtimeInfo info)
 		{
-			string outputString = info.Buses.Aggregate("", (current, bus) => current + String.Format("{0}    {1}X", bus.LineNumber, bus.DepartTime));
-			_writer.WriteToPort(outputString);
+			string output = "";
+			foreach (var bus in info.Buses)
+			{
+				if(bus.LineNumber.Count() == 2)
+				{
+					output += String.Format("{0}  {2} {1}X", bus.LineNumber, bus.DepartTime, bus.Destination);
+				}else
+				{
+					output += String.Format("{0} {2} {1}X", bus.LineNumber, bus.DepartTime, bus.Destination);
+				}
+			}
+				_writer.WriteToPort(output);
 
-			Console.WriteLine("Writing this to COM4\n " + outputString);
+			Console.WriteLine("Writing this to COM4\n " + output);
 		}
 	}
 }

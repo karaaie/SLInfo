@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
-using MassTransit;
 using Quartz;
 using Quartz.Impl;
 using SL.Web;
-using SLParser.Domain;
-using Bus = MassTransit.Bus;
 
 namespace SL.Publisher
 {
@@ -16,7 +12,7 @@ namespace SL.Publisher
         static void Main(string[] args)
         {
 
-
+			/*
 			// construct a scheduler factory
 			ISchedulerFactory schedFact = new StdSchedulerFactory();
 
@@ -39,6 +35,31 @@ namespace SL.Publisher
 
         	sched.ScheduleJob(jobDetail, trigger); 
 			sched.Start();
+			 * */
+
+			/*
+			IJobDetail job = JobBuilder.Create<PublisherService>()
+				.WithIdentity("job1", "group1")
+				.Build();
+			ITrigger trigger = TriggerBuilder.Create()
+				.WithIdentity("trigger1", "group1")
+				.StartAt(DateTime.UtcNow)
+				.WithSimpleSchedule(x => x.WithIntervalInSeconds(30))
+				.Build();
+
+			ISchedulerFactory schedFact = new StdSchedulerFactory();
+
+			// get a scheduler
+			IScheduler sched = schedFact.GetScheduler();
+        	sched.ScheduleJob(job, trigger);
+			sched.Start();
+			*/
+        	var service = new PublisherService();
+			while(true)
+			{
+				service.Execute(null);
+				Thread.Sleep(20000);
+			}
 
         }
 
@@ -61,7 +82,7 @@ namespace SL.Publisher
 			_parser = new WebParser(Url,Path);
 		}
 
-		public void Execute(JobExecutionContext context)
+		public void Execute(IJobExecutionContext context)
 		{
 			var info = _parser.GetWebPage();
 			_publisherWorker.Publish(info);

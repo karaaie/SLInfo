@@ -35,8 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Logging">
-      <HintPath>..\packages\Common.Logging.1.2.0\lib\1.0\Common.Logging.dll</HintPath>
+    <Reference Include="C5">
+      <HintPath>..\packages\Quartz2\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="clrzmq">
+      <HintPath>..\packages\clrzmq2.2.1.0.2011100900\lib\clrzmq.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Quartz2\Common.Logging.dll</HintPath>
     </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
@@ -53,8 +60,9 @@
     <Reference Include="MassTransit.Transports.RabbitMq">
       <HintPath>..\packages\MassTransit.RabbitMQ.2.0.1.0\lib\net40\MassTransit.Transports.RabbitMq.dll</HintPath>
     </Reference>
-    <Reference Include="Quartz">
-      <HintPath>..\packages\Quartz.1.0.3\lib\3.5\Quartz.dll</HintPath>
+    <Reference Include="Quartz, Version=1.0.3.3, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Quartz2\Quartz.dll</HintPath>
     </Reference>
     <Reference Include="RabbitMQ.Client">
       <HintPath>..\packages\RabbitMQ.Client.2.6.1\lib\net30\RabbitMQ.Client.dll</HintPath>
@@ -85,6 +93,11 @@
       <Project>{B84B8CED-F078-41C0-86E1-182B872B8577}</Project>
       <Name>SL.Web</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libzmq.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
