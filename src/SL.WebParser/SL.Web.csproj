@@ -32,16 +32,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Fizzler">
-      <HintPath>..\..\..\..\libs\Fizzler\Fizzler.dll</HintPath>
+      <HintPath>..\packages\Fizzler\Fizzler.dll</HintPath>
     </Reference>
     <Reference Include="Fizzler.Systems.HtmlAgilityPack">
-      <HintPath>..\..\..\..\libs\Fizzler\Fizzler.Systems.HtmlAgilityPack.dll</HintPath>
+      <HintPath>..\packages\Fizzler\Fizzler.Systems.HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Fizzler.Systems.XmlNodeQuery">
-      <HintPath>..\..\..\..\libs\Fizzler\Fizzler.Systems.XmlNodeQuery.dll</HintPath>
+      <HintPath>..\packages\Fizzler\Fizzler.Systems.XmlNodeQuery.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
-      <HintPath>..\..\..\..\libs\Fizzler\HtmlAgilityPack.dll</HintPath>
+      <HintPath>..\packages\Fizzler\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

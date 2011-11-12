@@ -1,0 +1,91 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="class" priority="1" />
+      <Item value="public" priority="2" />
+      <Item value="Listener`0" priority="1" />
+      <Item value="ctor" priority="1" />
+      <Item value="private" priority="4" />
+      <Item value="void" priority="1" />
+      <Item value="InitBus`0" priority="0" />
+      <Item value="Writer`0" priority="1" />
+      <Item value="_writer" priority="0" />
+      <Item value="new" priority="4" />
+      <Item value="Writer" priority="0" />
+      <Item value="string" priority="2" />
+      <Item value="RealtimeInfo`0" priority="0" />
+      <Item value="info" priority="0" />
+      <Item value="using" priority="1" />
+      <Item value="MassTransit" priority="1" />
+      <Item value="System" priority="0" />
+      <Item value="IO" priority="0" />
+      <Item value="Pipes" priority="0" />
+      <Item value="SerialPort`0" priority="0" />
+      <Item value="Container`0" priority="0" />
+      <Item value="_arduinoPort" priority="5" />
+      <Item value="SerialPort" priority="0" />
+      <Item value="comPort" priority="1" />
+      <Item value="components" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="throw" priority="0" />
+      <Item value="Exception" priority="0" />
+      <Item value="byte" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.Ports.SerialPort">
+      <Item value="PortName" priority="0" />
+      <Item value="BaudRate" priority="0" />
+      <Item value="Open`0" priority="0" />
+      <Item value="IsOpen" priority="0" />
+      <Item value="WriteLine`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SL.SerialListener.Writer">
+      <Item value="WriteToPort`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="560" fromTop="27" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="0" fromTop="0" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="239" fromTop="11" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Writer.cs" caret="198" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="121" fromTop="14" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="121" fromTop="12" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="121" fromTop="7" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="121" fromTop="22" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="121" fromTop="8" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="1291" fromTop="5" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="121" fromTop="1" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="132" fromTop="6" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="13" fromTop="0" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="270" fromTop="7" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="457" fromTop="11" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="494" fromTop="22" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="121" fromTop="6" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Writer.cs" caret="67" fromTop="0" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Writer.cs" caret="656" fromTop="16" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Writer.cs" caret="312" fromTop="16" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="239" fromTop="11" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Writer.cs" caret="412" fromTop="18" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
