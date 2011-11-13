@@ -11,50 +11,7 @@ namespace SL.Publisher
 
         static void Main(string[] args)
         {
-
-			/*
-			// construct a scheduler factory
-			ISchedulerFactory schedFact = new StdSchedulerFactory();
-
-			// get a scheduler
-			IScheduler sched = schedFact.GetScheduler();
-			sched.Start();
-
-			// construct job info
-			JobDetail jobDetail = new JobDetail("SLPublisher", null, typeof(PublisherService));
-			
-			
-			Trigger trigger = new SimpleTrigger("myTrigger",
-								null,
-								DateTime.UtcNow,
-								null,
-								SimpleTrigger.RepeatIndefinitely,
-								TimeSpan.FromSeconds(20)) {StartTimeUtc = DateTime.UtcNow, Name = "SLPublish"}; 
-
-			// start on the next even hour
-
-        	sched.ScheduleJob(jobDetail, trigger); 
-			sched.Start();
-			 * */
-
-			/*
-			IJobDetail job = JobBuilder.Create<PublisherService>()
-				.WithIdentity("job1", "group1")
-				.Build();
-			ITrigger trigger = TriggerBuilder.Create()
-				.WithIdentity("trigger1", "group1")
-				.StartAt(DateTime.UtcNow)
-				.WithSimpleSchedule(x => x.WithIntervalInSeconds(30))
-				.Build();
-
-			ISchedulerFactory schedFact = new StdSchedulerFactory();
-
-			// get a scheduler
-			IScheduler sched = schedFact.GetScheduler();
-        	sched.ScheduleJob(job, trigger);
-			sched.Start();
-			*/
-        	var service = new PublisherService();
+           	var service = new PublisherService();
 			while(true)
 			{
 				service.Execute(null);

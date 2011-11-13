@@ -10,19 +10,19 @@
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
       <Item value="class" priority="1" />
-      <Item value="public" priority="2" />
-      <Item value="Listener`0" priority="1" />
+      <Item value="public" priority="3" />
+      <Item value="Listener`0" priority="2" />
       <Item value="ctor" priority="1" />
-      <Item value="private" priority="4" />
-      <Item value="void" priority="1" />
+      <Item value="private" priority="9" />
+      <Item value="void" priority="3" />
       <Item value="InitBus`0" priority="0" />
       <Item value="Writer`0" priority="1" />
       <Item value="_writer" priority="0" />
-      <Item value="new" priority="4" />
+      <Item value="new" priority="7" />
       <Item value="Writer" priority="0" />
-      <Item value="string" priority="3" />
-      <Item value="RealtimeInfo`0" priority="0" />
-      <Item value="info" priority="1" />
+      <Item value="string" priority="4" />
+      <Item value="RealtimeInfo`0" priority="1" />
+      <Item value="info" priority="2" />
       <Item value="using" priority="1" />
       <Item value="MassTransit" priority="1" />
       <Item value="System" priority="0" />
@@ -43,14 +43,30 @@
       <Item value="job" priority="1" />
       <Item value="sched" priority="0" />
       <Item value="trigger" priority="0" />
-      <Item value="while" priority="0" />
+      <Item value="while" priority="1" />
       <Item value="var" priority="0" />
       <Item value="service" priority="0" />
       <Item value="bus" priority="1" />
       <Item value="foreach" priority="0" />
       <Item value="else" priority="0" />
-      <Item value="output" priority="0" />
+      <Item value="output" priority="1" />
       <Item value="Bus" priority="0" />
+      <Item value="Context`0" priority="0" />
+      <Item value="Socket`0" priority="1" />
+      <Item value="_publishSocket" priority="2" />
+      <Item value="Encoding`0" priority="1" />
+      <Item value="Context" priority="1" />
+      <Item value="_context" priority="0" />
+      <Item value="ContextBoundObject`0" priority="0" />
+      <Item value="_contex" priority="1" />
+      <Item value="_subscriberSocket" priority="3" />
+      <Item value="SocketType`0" priority="0" />
+      <Item value="return" priority="0" />
+      <Item value="ConvertRealtimeInfoToString`0" priority="0" />
+      <Item value="encoding" priority="0" />
+      <Item value="SendToArduino`0" priority="0" />
+      <Item value="Console`0" priority="0" />
+      <Item value="Listen`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.IO.Ports.SerialPort">
       <Item value="PortName" priority="0" />
@@ -95,46 +111,67 @@
       <Item value="Configure`0" priority="0" />
       <Item value="OutboundPipeline" priority="0" />
     </ItemStatistics>
+    <ItemStatistics item="Qualified:ZMQ.Socket">
+      <Item value="Send`0" priority="0" />
+      <Item value="Bind`0" priority="1" />
+      <Item value="Connect`0" priority="0" />
+      <Item value="Recv`0" priority="0" />
+      <Item value="Subscribe`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Text.Encoding">
+      <Item value="Unicode" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZMQ.Context">
+      <Item value="Socket`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ZMQ.SocketType">
+      <Item value="PUB" priority="0" />
+      <Item value="SUB" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="0" />
+    </ItemStatistics>
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="201" fromTop="11" />
       <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Writer.cs" caret="198" fromTop="9" />
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="1009" fromTop="31" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="1520" fromTop="1" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="926" fromTop="11" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:app.config" caret="0" fromTop="0" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="449" fromTop="16" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="298" fromTop="7" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="0" fromTop="0" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="770" fromTop="33" />
     </RecentFiles>
     <RecentEdits>
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="121" fromTop="22" />
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="121" fromTop="8" />
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="1291" fromTop="5" />
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="121" fromTop="1" />
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="132" fromTop="6" />
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="13" fromTop="0" />
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="270" fromTop="7" />
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="457" fromTop="11" />
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="494" fromTop="22" />
       <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="121" fromTop="6" />
       <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Writer.cs" caret="67" fromTop="0" />
       <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Writer.cs" caret="656" fromTop="16" />
       <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Writer.cs" caret="312" fromTop="16" />
       <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Program.cs" caret="239" fromTop="11" />
       <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Writer.cs" caret="412" fromTop="18" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="206" fromTop="4" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="1196" fromTop="31" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="1203" fromTop="20" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="199" fromTop="4" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="199" fromTop="31" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="199" fromTop="20" />
       <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="88" fromTop="3" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="1591" fromTop="16" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="2167" fromTop="16" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="1989" fromTop="6" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="892" fromTop="4" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="1524" fromTop="22" />
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="715" fromTop="22" />
-      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="995" fromTop="30" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="1525" fromTop="20" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="320" fromTop="16" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="1537" fromTop="22" />
-      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="1375" fromTop="31" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="389" fromTop="16" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="965" fromTop="16" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="787" fromTop="6" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="322" fromTop="22" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="895" fromTop="22" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="215" fromTop="9" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="459" fromTop="16" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="53" fromTop="0" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="895" fromTop="16" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="1253" fromTop="40" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="577" fromTop="21" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="696" fromTop="19" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="139" fromTop="9" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="45" fromTop="0" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="556" fromTop="18" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="981" fromTop="21" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="335" fromTop="19" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:PublisherWorker.cs" caret="449" fromTop="16" />
+      <File id="323B7133-D237-401B-9035-C0461689D221/f:Program.cs" caret="197" fromTop="9" />
+      <File id="C34A5112-4C0D-4058-B7F5-6A4C234AF2A9/f:Listener.cs" caret="770" fromTop="33" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -144,8 +181,7 @@
     <Providers />
   </UnitTestRunner>
   <UnitTestRunnerNUnit>
-    <NUnitInstallDir IsNull="False">
-    </NUnitInstallDir>
+    <NUnitInstallDir>D:\Program Files (x86)\NUnit 2.5.10\bin\net-2.0\</NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
 </Configuration>

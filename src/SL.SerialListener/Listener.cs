@@ -1,48 +1,46 @@
 ﻿using System;
-using System.Linq;
-using SLParser.Domain;
-using Bus = MassTransit.Bus;
-using MassTransit;
+using System.Text;
+using ZMQ;
+
 namespace SL.SerialListener
 {
 	public class Listener
 	{
-		private Writer _writer;
+		private readonly Writer _writer;
+	    private Context _contex;
+        private Socket _subscriberSocket;
+
 
 		public Listener()
 		{
 			InitBus();
 			_writer = new Writer("COM4");
+            Listen();
 		}
+
+	    private void Listen()
+        {
+            while(true)
+            {
+                string info = _subscriberSocket.Recv(Encoding.Unicode);
+                SendToArduino(info);
+                Console.WriteLine(info);
+            }
+        }
 
 		private void InitBus()
 		{
-			Bus.Initialize(sbc =>
-			{
-				sbc.UseRabbitMq();
-				sbc.ReceiveFrom("rabbitmq://localhost/test_queue");
-				sbc.Subscribe(subs => subs.Handler<RealtimeInfo>(SendToArduino));
-			});
-
+		    _contex = new Context(1);
+		    _subscriberSocket = _contex.Socket(SocketType.SUB);
+            _subscriberSocket.Subscribe("",Encoding.Unicode);
+            _subscriberSocket.Connect("tcp://127.0.0.1:5556");
 		}
 
 		
-		private void SendToArduino(RealtimeInfo info)
+		private void SendToArduino(string info)
 		{
-			string output = "";
-			foreach (var bus in info.Buses)
-			{
-				if(bus.LineNumber.Count() == 2)
-				{
-					output += String.Format("{0}  {2} {1}X", bus.LineNumber, bus.DepartTime, bus.Destination);
-				}else
-				{
-					output += String.Format("{0} {2} {1}X", bus.LineNumber, bus.DepartTime, bus.Destination);
-				}
-			}
-				_writer.WriteToPort(output);
-
-			Console.WriteLine("Writing this to COM4\n " + output);
+			_writer.WriteToPort(info);
+			Console.WriteLine("Writing this to COM4\n " + info);
 		}
 	}
 }
